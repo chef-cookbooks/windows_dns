@@ -1,9 +1,9 @@
-# windows_dns_record Cookbook
+# windows_dns Cookbook
 
-[![Cookbook Version](https://img.shields.io/cookbook/v/windows_dns_record.svg)](https://supermarket.chef.io/cookbooks/windows_dns_record)
+[![Cookbook Version](https://img.shields.io/cookbook/v/windows_dns.svg)](https://supermarket.chef.io/cookbooks/windows_dns)
 [![Build status](https://ci.appveyor.com/api/projects/status/08ufviinkdtwi7vm/branch/master?svg=true)](https://ci.appveyor.com/project/ChefWindowsCookbooks/windows-dns-record/branch/master)
 
-This cookbook provides a resource for managing DNS records on Windows hosts.
+Chef resources for managing DNS on Windows hosts
 
 ## Requirements
 
@@ -19,9 +19,11 @@ This cookbook provides a resource for managing DNS records on Windows hosts.
 
 ## Resources
 
-### windows_dns_record
+### one
 
+### two
 
+### three
 
 ## License
 ```

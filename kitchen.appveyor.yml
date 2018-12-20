@@ -25,6 +25,6 @@ verifier:
   name: inspec
 
 suites:
-  - name: default
+  - name: dns
     run_list:
-      - recipe[test::default]
+      - recipe[test::dns]

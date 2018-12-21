@@ -10,4 +10,4 @@ source_url       'https://github.com/chef-cookbooks/windows_dns'
 issues_url       'https://github.com/chef-cookbooks/windows_dns/issues'
 chef_version     '>= 13.0'
 
-depends 'windows', '>=5.2'
+depends 'windows'

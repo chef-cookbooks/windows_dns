@@ -14,7 +14,7 @@ This cookbook provides a resource for managing DNS on Windows hosts.
 
 ### Chef
 
-- Chef 13.4+
+- Chef 13
 
 ## Resources
 

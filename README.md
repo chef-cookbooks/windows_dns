@@ -12,7 +12,7 @@ This cookbook provides a resource for managing DNS on Windows hosts.
 - Windows Server 2008R2
 - Windows Server 2012R2
 - Windows Server 2016
-- Windows Server 29019
+- Windows Server 2019
 
 ### Chef
 

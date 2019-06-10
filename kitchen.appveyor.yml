@@ -12,7 +12,7 @@ transport:
   elevated: true
 
 provisioner:
-  name: nodes
+  name: chef_zero
   deprecations_as_errors: true
   product_name: chef
   channel: stable

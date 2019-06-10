@@ -15,13 +15,13 @@ transport:
   elevated: true
 
 provisioner:
-  name: nodes
+  name: chef_zero
   deprecations_as_errors: true
   client_rb:
-    chef_license: accept
+    chef_license: accept-no-persist
   product_name: chef
   product_version: 15
-  chef_license: accept
+  chef_license: accept-no-persist
 
 verifier:
   name: inspec

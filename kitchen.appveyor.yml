@@ -12,11 +12,11 @@ transport:
   elevated: true
 
 provisioner:
-  name: chef_zero
+  name: nodes
   deprecations_as_errors: true
   product_name: chef
   channel: stable
-  version: 14.6
+  version: 15
 
 platforms:
   - name: windows-2012R2
@@ -27,4 +27,8 @@ verifier:
 suites:
   - name: dns
     run_list:
+      - recipe[powershell::powershell5]
       - recipe[test::dns]
+  - name: client
+    run_list:
+      - recipe[test::client]

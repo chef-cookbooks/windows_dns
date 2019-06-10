@@ -9,12 +9,14 @@ This cookbook provides a resource for managing DNS on Windows hosts.
 
 ### Platforms
 
+- Windows Server 2008R2
 - Windows Server 2012R2
 - Windows Server 2016
+- Windows Server 29019
 
 ### Chef
 
-- Chef 13
+- Chef 14
 
 ## Resources
 
@@ -67,6 +69,34 @@ Creates an Active Directory Integrated DNS Zone on the local server
 windows_dns_zone 'chef.local' do
   server_type 'standalone'
 end
+```
+
+## windows_dns_client
+
+Configures interface DNS settings on the local server
+
+#### Actions
+
+- :configure: Sets static DNS search server IP's and DNS suffixes to search
+- :unconfigure: Reverts settings back to DHCP
+
+#### Properties
+
+- `interface_alias` : String, Interface name to configure DNS settings on, defaults to `node['network']['interfaces'][node['network']['default_interface']]['instance']['net_connection_id']`
+- `domain_servers` : Array, IP's of DNS servers
+- `search_domains` : Array, Domain suffix to append to short hostnames when searching DNS, this property is global to all interfaces on a server
+
+#### Examples
+
+```ruby
+# Set DNS servers IP and Search suffix for Ethernet 2
+
+windows_dns_client 'default_interface' do
+  interface_alias 'Ethernet 2'
+  search_domains ['chef.local']
+  domain_servers %w(192.168.1.1 192.168.1.2)
+end
+
 ```
 
 ## License

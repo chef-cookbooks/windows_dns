@@ -54,15 +54,14 @@ action :configure do
   ruby_block 'Test values' do
     block do
       sleep(15)
-      Chef::Log.warn("TEST0 = Starting Tests")
+      Chef::Log.warn('TEST0 = Starting Tests')
       Chef::Log.warn("TEST0.25 = #{new_resource.domain_servers.inspect}; TEST0.5 = #{new_resource.search_domains.inspect}; Test0.75 = #{new_resource.interface_alias}")
-      Chef::Log.warn("TEST1 = #{powershell_out(wmi_call("DNSServerSearchOrder")).stdout.strip.inspect}")
-      Chef::Log.warn("TEST2 = #{new_resource.domain_servers.include?(powershell_out(wmi_call("DNSServerSearchOrder")).stdout.strip).inspect}")
-      Chef::Log.warn("TEST3 = #{powershell_out(wmi_call("DNSDomainSuffixSearchOrder")).stdout.strip.inspect}")
-      Chef::Log.warn("TEST4 = #{new_resource.search_domains.include?(powershell_out(wmi_call("DNSDomainSuffixSearchOrder")).stdout.strip).inspect}")
+      Chef::Log.warn("TEST1 = #{powershell_out(wmi_call('DNSServerSearchOrder')).stdout.strip.inspect}")
+      Chef::Log.warn("TEST2 = #{new_resource.domain_servers.include?(powershell_out(wmi_call('DNSServerSearchOrder')).stdout.strip).inspect}")
+      Chef::Log.warn("TEST3 = #{powershell_out(wmi_call('DNSDomainSuffixSearchOrder')).stdout.strip.inspect}")
+      Chef::Log.warn("TEST4 = #{new_resource.search_domains.include?(powershell_out(wmi_call('DNSDomainSuffixSearchOrder')).stdout.strip).inspect}")
     end
   end
-
 end
 
 action :unconfigure do

@@ -93,7 +93,7 @@ Configures interface DNS settings on the local server
 
 windows_dns_client 'default_interface' do
   interface_alias 'Ethernet 2'
-  search_domains ['chef.local']
+  search_domains %w(chef.local)
   domain_servers %w(192.168.1.1 192.168.1.2)
 end
 

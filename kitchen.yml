@@ -4,11 +4,6 @@ driver:
   customize:
     cpus: 2
     memory: 2048
-    clipboard: bidirectional
-    draganddrop: bidirectional
-#    differencing_disk: true
-#  network:
-#    - ["public_network", {bridge: "Default Switch"}]
 
 transport:
   name: winrm

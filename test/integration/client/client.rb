@@ -6,7 +6,7 @@ def wmi_call(nic_alias, method)
   EOS
 end
 
-sleep(15)
+sleep(30)
 describe powershell(wmi_call('Ethernet', 'DNSServerSearchOrder')) do
   its('strip') { should eq '8.8.8.8' }
 end

@@ -6,14 +6,12 @@
     "platform": "windows_2012r2",
     "fqdn": "dns.google.com",
     "recipes": [
-      "powershell::powershell5",
       "test::dns"
     ]
   },
   "normal": {
   },
   "run_list": [
-    "recipe[powershell::powershell5]",
     "recipe[test::dns]"
   ]
 }

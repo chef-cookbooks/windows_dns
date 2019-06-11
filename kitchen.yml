@@ -87,7 +87,6 @@ platforms:
 suites:
   - name: dns
     run_list:
-      - recipe[powershell::powershell5]
       - recipe[test::dns]
   - name: client
     run_list:

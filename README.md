@@ -5,6 +5,8 @@
 
 This cookbook provides a resource for managing DNS on Windows hosts.
 
+DEPRECATED: These resources ship in Chef Infra Client 15 or later out of the box.
+
 ## Requirements
 
 ### Platforms

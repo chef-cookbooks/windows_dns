@@ -16,6 +16,7 @@ provisioner:
   deprecations_as_errors: true
   product_name: chef
   channel: stable
+  chef_license: accept-no-persist
   version: 14
 
 platforms:
@@ -28,3 +29,6 @@ suites:
   - name: dns
     run_list:
       - recipe[test::dns]
+  - name: client
+    run_list:
+      - recipe[test::client]

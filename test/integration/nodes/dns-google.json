@@ -1,0 +1,17 @@
+{
+  "id": "google-dns",
+  "chef_environment": "_default",
+  "automatic": {
+    "ipaddress": "8.8.8.8",
+    "platform": "windows_2012r2",
+    "fqdn": "dns.google.com",
+    "recipes": [
+      "test::dns"
+    ]
+  },
+  "normal": {
+  },
+  "run_list": [
+    "recipe[test::dns]"
+  ]
+}
